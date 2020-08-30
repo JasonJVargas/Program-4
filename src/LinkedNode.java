@@ -1,16 +1,22 @@
-// This class encapsulates an int value as a linked node
-public class LinkedNode {
-	int x;            // The data value
-	LinkedNode next;  // Reference to the next LinkedNode
-	
-	// Default constructor
-	LinkedNode() {
+//The base node class for Linked Nodes
+class LinkedNode {
+	int x; // The data value
+	LinkedNode next; // Reference to the next LinkedNode
+
+	public LinkedNode(int x) {
+		this.x = x;
 		next = null;
 	}
-	
-	// Constructor that initializes the data value
-	LinkedNode(int x) {
-		this.x = x;
+
+	public int getValue() {
+		return x;
 	}
-	
+
+	public LinkedNode nextNode() {
+		return next;
+	}
+
+	public void setNextNode(LinkedNode setNode) {
+		next = setNode;
+	}
 }

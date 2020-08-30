@@ -1,20 +1,40 @@
+import java.util.Scanner;
 
-//Driver program
 public class Test {
 
+	private static Scanner scan;
+
 	public static void main(String[] args) {
-		Set queue = new Set();
-		queue.add(5);
-		queue.add(8);
-		queue.add(12);
-		queue.add(14);
-		queue.add(19);
+		Set testNode = new Set();
 
-		System.out.println(queue);
-		
-		queue.del(12);
-		System.out.println(queue);
+		System.out.println("Programming Fundamentals. \nNAME: Jason Vargas " + "\nPROGRAMMING ASSIGNMENT 4 - SET");
+		System.out.println("\nUse commands add x, del x, or exists x, where x is an integer.");
 
+		String[] arr;
+		for (;;) { //Infinite loop
+			scan = new Scanner(System.in);
+			System.out.print("Enter Command: ");
+			// Create a string variable for user input and split it
+			String input = scan.nextLine();
+			arr = input.split(" ");
+			int index = 0;
+			String str = arr[index];
+			index++;
+			int x = Integer.parseInt(arr[index]);
+			// If statements to handle each operation
+			if (str.equals("add")) {
+				testNode.add(x);
+				System.out.println(testNode.toString());
+			}
+			if (str.equals("del")) {
+				testNode.del(x);
+				System.out.println(testNode.toString());
+			}
+			if (str.equals("exists")) {
+				System.out.println(testNode.exists(x));
+			}
+
+		}
 	}
 
 }

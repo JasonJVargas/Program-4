@@ -1,3 +1,9 @@
+/* Jason Vargas
+ * Programming Fundamentals
+ * Summer 2020
+ * Program 4 - Set ADT
+ */
+
 import java.util.Scanner;
 
 public class Test {
